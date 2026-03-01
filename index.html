@@ -1,169 +1,1033 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Privacy Policy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
-      background-color: #f9fafb;
-      color: #1f2937;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<title>Privacy Policy – Employee Management Application</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,700;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    }
+<style>
+:root {
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --border: #e5e0d8;
+  --text: #1a1814;
+  --muted: #6b6560;
+  --accent: #2d4a3e;
+  --accent-light: #e8efe9;
+  --accent2: #c8622a;
+  --rule: #d4cfc8;
+}
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 16px;
-    }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    h2 {
-      font-size: 22px;
-      margin-top: 28px;
-      margin-bottom: 10px;
-    }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+  font-size: 16px;
+}
 
-    p {
-      margin-bottom: 12px;
-    }
+/* Layout */
+.page-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 40px 100px;
+}
 
-    ul {
-      padding-left: 20px;
-      margin-bottom: 12px;
-    }
+/* Header */
+.doc-header {
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 32px;
+  margin-bottom: 48px;
+}
 
-    li {
-      margin-bottom: 6px;
-    }
+.doc-header .label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  margin-bottom: 14px;
+  display: block;
+}
 
-    .footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #6b7280;
-    }
-  </style>
+.doc-header h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.doc-header .subtitle {
+  font-size: 17px;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 580px;
+}
+
+.meta-bar {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.meta-bar .meta-item {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.meta-bar .meta-item strong {
+  color: var(--text);
+  font-weight: 500;
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+}
+
+/* TOC */
+.toc {
+  background: var(--accent-light);
+  border: 1px solid #c5d8c6;
+  border-radius: 8px;
+  padding: 28px 32px;
+  margin-bottom: 52px;
+}
+
+.toc h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.toc ol {
+  list-style: none;
+  columns: 2;
+  column-gap: 32px;
+}
+
+.toc ol li {
+  margin-bottom: 7px;
+  break-inside: avoid;
+}
+
+.toc ol li a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.toc ol li a:hover { text-decoration: underline; }
+
+.toc ol li .sec-num {
+  display: inline-block;
+  width: 22px;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .toc ol { columns: 1; }
+}
+
+/* Section */
+section {
+  margin-bottom: 52px;
+  scroll-margin-top: 20px;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.section-num {
+  font-family: 'Fraunces', serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent2);
+  min-width: 28px;
+  padding-top: 5px;
+  letter-spacing: 0.05em;
+}
+
+.section-header h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+/* Subsections */
+h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 28px 0 10px;
+}
+
+p {
+  margin-bottom: 14px;
+  color: var(--text);
+  font-size: 15.5px;
+}
+
+ul, ol {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 15.5px;
+  color: var(--text);
+}
+
+li::marker { color: var(--accent2); }
+
+/* Callout boxes */
+.callout {
+  border-left: 3px solid var(--accent);
+  background: var(--accent-light);
+  padding: 16px 20px;
+  border-radius: 0 6px 6px 0;
+  margin: 20px 0;
+  font-size: 15px;
+}
+
+.callout.warning {
+  border-left-color: var(--accent2);
+  background: #fdf2ec;
+}
+
+.callout p { margin: 0; color: var(--text); }
+
+/* Data table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  margin: 20px 0;
+}
+
+.data-table th {
+  background: var(--text);
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.data-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:nth-child(even) td { background: #f9f7f4; }
+
+/* Tag */
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.tag.orange { background: #fdf2ec; color: var(--accent2); }
+
+/* Footer */
+.doc-footer {
+  margin-top: 64px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: gap;
+}
+
+.doc-footer p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 680px) {
+  .page-wrapper { padding: 36px 20px 60px; }
+  .doc-header h1 { font-size: 36px; }
+  .section-header h2 { font-size: 22px; }
+}
+</style>
 </head>
 <body>
+<div class="page-wrapper">
 
-  <div class="container">
+  <!-- Header -->
+  <header class="doc-header">
+    <span class="label">Legal Document · Internal Use Only</span>
     <h1>Privacy Policy</h1>
-
-    <p>
-      This Privacy Policy explains how we collect, use, and protect your information
-      when you use our mobile application.
-    </p>
-
-    <h2>Information We Collect</h2>
-    <p>
-      We only collect information that is necessary to provide and improve the
-      functionality of the app.
-    </p>
-
-    <h2>Camera Usage</h2>
-    <p>
-      The app uses the device camera exclusively for Face ID authentication and
-      related security features. Camera access is used only when required and
-      never without your consent.
-    </p>
-    <p>
-      We do not store, transmit, or share camera images or videos.
-    </p>
-
-    <h2>Biometric and Face ID Data</h2>
-    <p>
-      The app uses biometric authentication methods such as fingerprint and Face ID
-      to securely authenticate users and protect sensitive data.
-    </p>
-    <ul>
-      <li>Biometric data is processed locally on your device</li>
-      <li>No biometric data is stored on our servers</li>
-      <li>No biometric data is shared with third parties</li>
-    </ul>
-
-    <h2>Location Information</h2>
-    <p>
-      The app collects location data to support attendance-related features.
-    </p>
-    <ul>
-      <li>Location access is used to verify your presence at the office</li>
-      <li>Background location may be used to automatically mark attendance</li>
-      <li>Location data is only used for attendance purposes</li>
-    </ul>
-    <p>
-      We do not track users unnecessarily or use location data for advertising.
-    </p>
-
-    <h2>Background Services</h2>
-    <p>
-      The app may use foreground and background services to:
-    </p>
-    <ul>
-      <li>Fetch updates</li>
-      <li>Process attendance-related location checks</li>
-      <li>Deliver important notifications</li>
-    </ul>
-
-    <h2>Notifications and Vibration</h2>
-    <p>
-      We use notifications to inform users about important updates, attendance
-      status, and app-related alerts. Vibration may be used to enhance notification
-      experience.
-    </p>
-
-    <h2>Wake Lock</h2>
-    <p>
-      Wake lock permission is used to ensure critical tasks such as attendance
-      verification and background processing complete without interruption.
-    </p>
-
-    <h2>Data Sharing</h2>
-    <p>
-      We do not sell, rent, or trade your personal data. Information is not shared
-      with third parties unless required by law.
-    </p>
-
-    <h2>Data Security</h2>
-    <p>
-      We implement appropriate technical and organizational measures to protect
-      your data against unauthorized access, loss, or misuse.
-    </p>
-
-    <h2>User Control</h2>
-    <p>
-      You can revoke permissions such as camera, location, and notifications at any
-      time through your device settings.
-    </p>
-
-    <h2>Changes to This Policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time. Any changes will be
-      reflected on this page.
-    </p>
-
-    <h2>Contact Us</h2>
-    <p>
-      If you have any questions or concerns about this Privacy Policy, please contact
-      us at:
-    </p>
-    <p>
-      <strong>Email:</strong> jayantkhanna3105@gmail.com
-    </p>
-
-    <div class="footer">
-      Last updated: January 2025
+    <p class="subtitle">Employee Management Application — How we collect, process, store, and protect your personal information within our organization.</p>
+    <div class="meta-bar">
+      <div class="meta-item"><strong>Version</strong>2.0</div>
+      <div class="meta-item"><strong>Last Updated</strong>March 2026</div>
+      <div class="meta-item"><strong>Applies To</strong>All Authorized Employees</div>
+      <div class="meta-item"><strong>Contact</strong>prasanna@citadelnetinc.com</div>
     </div>
+  </header>
+
+  <!-- TOC -->
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#s1"><span class="sec-num">1.</span> Scope &amp; Applicability</a></li>
+      <li><a href="#s2"><span class="sec-num">2.</span> Information We Collect</a></li>
+      <li><a href="#s3"><span class="sec-num">3.</span> Location Data Usage</a></li>
+      <li><a href="#s4"><span class="sec-num">4.</span> Biometric Authentication</a></li>
+      <li><a href="#s5"><span class="sec-num">5.</span> Camera Usage</a></li>
+      <li><a href="#s6"><span class="sec-num">6.</span> Background Services &amp; Permissions</a></li>
+      <li><a href="#s7"><span class="sec-num">7.</span> How We Use Your Data</a></li>
+      <li><a href="#s8"><span class="sec-num">8.</span> Data Sharing &amp; Disclosure</a></li>
+      <li><a href="#s9"><span class="sec-num">9.</span> Data Retention Policy</a></li>
+      <li><a href="#s10"><span class="sec-num">10.</span> Account Deletion &amp; Offboarding</a></li>
+      <li><a href="#s11"><span class="sec-num">11.</span> Data Storage &amp; Security</a></li>
+      <li><a href="#s12"><span class="sec-num">12.</span> Third-Party Services</a></li>
+      <li><a href="#s13"><span class="sec-num">13.</span> Employee Rights</a></li>
+      <li><a href="#s14"><span class="sec-num">14.</span> Legal Basis for Processing</a></li>
+      <li><a href="#s15"><span class="sec-num">15.</span> Compliance</a></li>
+      <li><a href="#s16"><span class="sec-num">16.</span> Children's Privacy</a></li>
+      <li><a href="#s17"><span class="sec-num">17.</span> Incident Response</a></li>
+      <li><a href="#s18"><span class="sec-num">18.</span> Cross-Border Data Transfers</a></li>
+      <li><a href="#s19"><span class="sec-num">19.</span> Policy Changes</a></li>
+      <li><a href="#s20"><span class="sec-num">20.</span> Contact Information</a></li>
+    </ol>
+  </nav>
+
+  <!-- Intro -->
+  <p>This Privacy Policy ("Policy") governs how <strong>Citadel Net Inc.</strong> ("Company," "we," "us," or "our") collects, processes, stores, shares, and protects the personal information of authorized employees ("you," "user," or "employee") who access and use the internal Employee Management Application ("Application" or "App"). By accessing or using the Application, you acknowledge that you have read and understood this Policy. This document is intended to be transparent, comprehensive, and compliant with applicable data protection laws.</p>
+
+  <p>This Application is a closed, enterprise-only system. There is no public access, no self-registration, and no use of data for commercial purposes such as advertising. All data collection is strictly limited to what is necessary for the legitimate management of workforce operations.</p>
+
+  <hr style="border:none;border-top:1px solid var(--rule);margin:40px 0;">
+
+  <!-- S1 -->
+  <section id="s1">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>Scope and Applicability</h2>
+    </div>
+
+    <h3>1.1 Who This Policy Covers</h3>
+    <p>This Policy applies to all individuals who are granted access to the Application, including:</p>
+    <ul>
+      <li>Full-time and part-time employees of the Company</li>
+      <li>Contractual staff with system access granted by authorized HR or Admin personnel</li>
+      <li>Site managers, team leads, and administrative staff</li>
+      <li>Any other personnel whose accounts are explicitly provisioned within the system</li>
+    </ul>
+
+    <h3>1.2 What This Policy Covers</h3>
+    <p>This Policy governs the collection and processing of personal data by the Application across all supported platforms, including Android and iOS mobile applications, and any associated web interfaces or administrative dashboards. It covers data collected automatically (such as attendance records and device logs) as well as data submitted voluntarily by users (such as messages and uploaded images).</p>
+
+    <h3>1.3 What This Policy Does Not Cover</h3>
+    <p>This Policy does not cover:</p>
+    <ul>
+      <li>Data collected through other company systems, websites, or applications not connected to this Application</li>
+      <li>Third-party services accessed via external links, if any are present</li>
+      <li>Personal devices not enrolled or managed by the Company's IT or HR department</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>No Public Access:</strong> This Application is strictly for internal organizational use. There is no public sign-up, trial access, or guest login. All accounts are created solely by authorized HR or Admin personnel.</p>
+    </div>
+  </section>
+
+  <!-- S2 -->
+  <section id="s2">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Information We Collect</h2>
+    </div>
+
+    <p>We collect only the minimum information necessary to operate the Application and manage workforce functions. Below is a detailed breakdown of each category of data collected, the specific fields involved, and the reasons for collection.</p>
+
+    <h3>2.1 Account &amp; Employment Information</h3>
+    <p>When an HR or Admin officer creates an employee account, the following data is entered into the system:</p>
+    <ul>
+      <li><strong>Full Name:</strong> Used for identification, communication, and record-keeping</li>
+      <li><strong>Official Email Address:</strong> Used as the primary login credential and for system notifications</li>
+      <li><strong>Employee ID:</strong> A unique identifier assigned by the Company used to link all activity to the correct record</li>
+      <li><strong>Company ID:</strong> Used in multi-entity or multi-branch environments to correctly assign the employee to their entity</li>
+      <li><strong>Office Location Mapping:</strong> Associates the employee with their designated primary office or site for geofencing purposes</li>
+      <li><strong>Role and Access Permissions:</strong> Determines which modules, data views, and actions the employee is authorized to perform within the application</li>
+    </ul>
+
+    <h3>2.2 Attendance Information</h3>
+    <p>Attendance tracking is a core function of this Application. The following data is collected to record, validate, and audit attendance:</p>
+    <ul>
+      <li><strong>Check-in and Check-out Timestamps:</strong> The exact date and time at which attendance is marked</li>
+      <li><strong>Location Coordinates:</strong> GPS coordinates captured at the time of attendance marking to validate physical presence at the designated office</li>
+      <li><strong>Geofence Validation Status:</strong> A boolean or status indicator confirming whether the employee was within or outside the defined geofence boundary when attendance was recorded</li>
+      <li><strong>Attendance Status:</strong> Present, Absent, Late, or other classifications based on Company policy and timing rules</li>
+      <li><strong>Automatic vs. Manual Mark:</strong> Whether attendance was marked automatically by the system or manually by the user</li>
+    </ul>
+
+    <h3>2.3 Messaging &amp; Internal Communication Data</h3>
+    <p>The Application includes internal messaging and module-based communication features. The following data may be collected:</p>
+    <ul>
+      <li><strong>Messages:</strong> Text messages sent within the application between employees, or updates posted within modules (e.g., HR notices, lead tracking updates, site updates)</li>
+      <li><strong>Images and Attachments:</strong> Images uploaded as part of messages, comments, or documentation within any module</li>
+      <li><strong>Module Activity Logs:</strong> Timestamped records of actions taken within modules such as Lead Tracking, Site Management, Driver Tracking, and Cab Management</li>
+      <li><strong>Sender and Recipient Information:</strong> Employee identifiers associated with messages or actions, used for attribution and audit purposes</li>
+    </ul>
+
+    <h3>2.4 Device &amp; Technical Information</h3>
+    <p>To ensure Application stability and compatibility, the following technical information is collected:</p>
+    <ul>
+      <li><strong>Device Type:</strong> The model and category of the device (e.g., smartphone, tablet)</li>
+      <li><strong>Operating System Version:</strong> The version of Android or iOS running on the device, used to ensure compatibility and address OS-specific issues</li>
+      <li><strong>Application Version:</strong> The version of the App installed on the device, used for troubleshooting, update management, and feature compatibility</li>
+      <li><strong>Error and Diagnostic Log Files:</strong> System-generated logs that record errors, crashes, or unexpected behavior within the App; used for debugging and quality improvement</li>
+      <li><strong>Session Identifiers:</strong> Temporary tokens used to maintain login sessions securely; these expire upon logout or timeout</li>
+    </ul>
+
+    <div class="callout warning">
+      <p><strong>What We Do Not Collect:</strong> We do not collect contact lists, SMS history, browsing history, call logs, microphone audio, or any data unrelated to the Application's core workforce management functions. We do not use your data for advertising, profiling, or resale.</p>
+    </div>
+  </section>
+
+  <!-- S3 -->
+  <section id="s3">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>Location Data Usage</h2>
+    </div>
+
+    <p>Location data is one of the more sensitive categories of personal data we collect. This section provides a complete and transparent explanation of how, when, and why location access is used.</p>
+
+    <h3>3.1 Types of Location Access Requested</h3>
+    <ul>
+      <li><strong>Precise Location (Fine Location):</strong> High-accuracy GPS coordinates necessary for geofencing validation. Approximate location is insufficient for determining whether an employee is within a defined office boundary.</li>
+      <li><strong>Background Location:</strong> The ability to access location data when the application is not in the foreground. This is required for automatic attendance processing during predefined login windows.</li>
+    </ul>
+
+    <h3>3.2 When Location Is Accessed</h3>
+    <p>Location data is accessed <em>only</em> during the following defined scenarios:</p>
+    <ul>
+      <li>During an automatic attendance attempt, which is triggered shortly before the employee's scheduled login time</li>
+      <li>During a manual attendance marking action initiated by the employee</li>
+      <li>Within a defined late-attendance window following the scheduled login time</li>
+    </ul>
+    <p>Location is <strong>not</strong> accessed continuously, is <strong>not</strong> tracked in real time throughout the workday, and is <strong>not</strong> accessed outside the above-defined attendance windows.</p>
+
+    <h3>3.3 Geofencing Explained</h3>
+    <p>Geofencing is a virtual geographic boundary defined around a designated office or site location. When an attendance event is triggered, the Application compares the employee's current GPS coordinates to the defined geofence boundary:</p>
+    <ul>
+      <li>If within the boundary: Attendance is marked as valid. Only the attendance status is stored; the precise coordinates are not retained in this case.</li>
+      <li>If outside the boundary: The attendance attempt may be flagged, and the location coordinates may be stored for audit and validation purposes in accordance with the retention policy in Section 9.</li>
+    </ul>
+
+    <h3>3.4 Background Location Justification</h3>
+    <p>Background location access is required because automated attendance attempts are designed to occur even when the Application is running in the background or has not been manually opened by the employee. Without background location access, the automatic attendance feature cannot function — requiring employees to manually open the Application at precise times to mark attendance, which is operationally impractical.</p>
+
+    <p>This permission is used narrowly and only during the scheduled windows described in Section 3.2. It is not used for live tracking, surveillance, or any purpose beyond automated attendance validation.</p>
+
+    <h3>3.5 No Live Tracking or Movement Monitoring</h3>
+    <div class="callout">
+      <p>We explicitly confirm: <strong>No live tracking is performed.</strong> The Application does not monitor or record the employee's movements throughout the day. Location is captured as a point-in-time reading during attendance events only, not as a continuous stream.</p>
+    </div>
+
+    <h3>3.6 Storage of Location Data</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Scenario</th><th>Data Stored</th><th>Retention</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Employee within geofence</td><td>Attendance status only; coordinates not retained</td><td>Indefinite (attendance record)</td></tr>
+        <tr><td>Employee outside geofence</td><td>GPS coordinates, timestamp, validation status</td><td>2 years</td></tr>
+        <tr><td>Failed attendance attempt</td><td>Timestamp, error status, optional coordinates</td><td>2 years</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- S4 -->
+  <section id="s4">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>Biometric Authentication</h2>
+    </div>
+
+    <p>The Application supports biometric authentication as a convenient and secure method for employees to log in. This section explains exactly how biometric data is handled.</p>
+
+    <h3>4.1 Supported Biometric Methods</h3>
+    <ul>
+      <li><strong>Face ID</strong> on supported iOS devices (iPhone X and later)</li>
+      <li><strong>Fingerprint Authentication</strong> on supported Android devices</li>
+      <li><strong>PIN or Passcode</strong> as a fallback if biometric authentication is unavailable or fails</li>
+      <li><strong>Email + Password</strong> as a standard authentication option available at all times</li>
+    </ul>
+
+    <h3>4.2 How Biometric Data Is Handled</h3>
+    <p>The Application uses the <strong>device-native biometric authentication APIs</strong> provided by iOS (Face ID / Touch ID via LocalAuthentication framework) and Android (BiometricPrompt API). These APIs work entirely within the operating system's secure enclave:</p>
+    <ul>
+      <li>Biometric data (facial geometry, fingerprint templates) is <strong>stored exclusively on your device</strong> in hardware-secured storage (the device's Secure Enclave on iOS or Trusted Execution Environment on Android)</li>
+      <li>The Application receives only a binary authentication result — a success or failure signal — from the operating system</li>
+      <li><strong>No biometric data is ever transmitted to our servers</strong></li>
+      <li><strong>No biometric data is collected, stored, or processed by us</strong> at any stage</li>
+      <li>We do not use any third-party facial recognition system, biometric processing SDK, or external biometric service</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Your biometric data never leaves your device.</strong> Our servers have no capability to store, access, or process fingerprint or facial recognition data. Authentication happens entirely between you and your device's operating system.</p>
+    </div>
+
+    <h3>4.3 Enabling and Disabling Biometric Login</h3>
+    <p>Biometric authentication is optional. Employees can choose to enable or disable this feature within the Application's settings at any time. Disabling biometric login does not affect access to the Application — employees can continue to log in using their email and password credentials.</p>
+  </section>
+
+  <!-- S5 -->
+  <section id="s5">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Camera Usage</h2>
+    </div>
+
+    <h3>5.1 When Camera Access Is Used</h3>
+    <p>Camera access is requested exclusively for the following purposes:</p>
+    <ul>
+      <li>Uploading images within the internal messaging system as part of comments, documentation, or status updates</li>
+      <li>Capturing and attaching images within specific operational modules (e.g., site documentation, incident reporting, vehicle status updates)</li>
+    </ul>
+
+    <h3>5.2 What Camera Is NOT Used For</h3>
+    <div class="callout warning">
+      <p><strong>The camera is not used for attendance verification, facial recognition, or any form of biometric identification.</strong> There is no "selfie check-in" or photo-based attendance feature.</p>
+    </div>
+
+    <h3>5.3 Storage of Images</h3>
+    <ul>
+      <li>Images uploaded through the Application are stored in <strong>Amazon S3</strong>, a secure and access-controlled cloud storage service</li>
+      <li>Access to stored images is restricted by role-based permissions; only authorized users can view images relevant to their work context</li>
+      <li>Images are retained for <strong>up to 7 years</strong> in accordance with the Company's operational and legal record-keeping obligations</li>
+      <li>Images may be deleted earlier upon HR request, provided deletion does not conflict with an active audit, legal hold, or compliance requirement</li>
+    </ul>
+
+    <h3>5.4 Image Upload Consent</h3>
+    <p>By uploading an image through the Application, the employee acknowledges that the image will be stored and may be viewed by authorized personnel in connection with the relevant work activity. Employees should not upload images containing sensitive personal information unrelated to their work duties.</p>
+  </section>
+
+  <!-- S6 -->
+  <section id="s6">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>Background Services &amp; System Permissions</h2>
+    </div>
+
+    <p>The Application requests certain device permissions to function correctly. Each permission is described below along with a clear justification for its necessity.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Permission</th><th>Purpose</th><th>Required?</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Foreground Service</strong></td>
+          <td>Runs a persistent process during attendance validation windows to ensure reliable geofencing and check-in processing even if the device's OS attempts to suspend background tasks</td>
+          <td><span class="tag">Required</span></td>
+        </tr>
+        <tr>
+          <td><strong>Post Notifications</strong></td>
+          <td>Sends attendance reminders, module updates, and internal message alerts to the employee's device</td>
+          <td><span class="tag">Required</span></td>
+        </tr>
+        <tr>
+          <td><strong>Vibration</strong></td>
+          <td>Provides haptic feedback for incoming notifications and alerts, complementing visual and audio indicators</td>
+          <td><span class="tag orange">Optional</span></td>
+        </tr>
+        <tr>
+          <td><strong>Internet Access</strong></td>
+          <td>Required for all communication between the Application and backend servers, including login, attendance syncing, messaging, and data retrieval</td>
+          <td><span class="tag">Required</span></td>
+        </tr>
+        <tr>
+          <td><strong>Network State Access</strong></td>
+          <td>Allows the Application to check network connectivity before attempting data sync, preventing failed requests and unnecessary battery usage</td>
+          <td><span class="tag">Required</span></td>
+        </tr>
+        <tr>
+          <td><strong>Ignore Battery Optimizations</strong></td>
+          <td>Prevents the Android OS from suspending geofencing and attendance services during battery-saving modes, which would prevent automatic attendance marking from functioning reliably</td>
+          <td><span class="tag">Required</span></td>
+        </tr>
+        <tr>
+          <td><strong>Wake Lock</strong></td>
+          <td>Temporarily prevents the device CPU from sleeping during critical operations such as processing a scheduled notification or completing an attendance sync request; released immediately after the task completes</td>
+          <td><span class="tag">Required</span></td>
+        </tr>
+        <tr>
+          <td><strong>Camera</strong></td>
+          <td>Used to capture images for upload within messaging and module documentation features (see Section 5)</td>
+          <td><span class="tag orange">On Use</span></td>
+        </tr>
+        <tr>
+          <td><strong>Fine Location</strong></td>
+          <td>Provides high-accuracy GPS coordinates for geofence validation during attendance events (see Section 3)</td>
+          <td><span class="tag">Required</span></td>
+        </tr>
+        <tr>
+          <td><strong>Background Location</strong></td>
+          <td>Enables automatic attendance attempts during scheduled windows when the App is not in the foreground (see Section 3)</td>
+          <td><span class="tag">Required</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>No permissions are requested beyond those listed above. The Application does not request access to contacts, microphone, call logs, calendar, storage outside of image uploads, or any other system resource not directly related to its workforce management functions.</p>
+  </section>
+
+  <!-- S7 -->
+  <section id="s7">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <h2>How We Use Your Data</h2>
+    </div>
+
+    <p>All data collected through the Application is used exclusively for the following organizational purposes:</p>
+
+    <h3>7.1 Workforce Management</h3>
+    <ul>
+      <li>Recording and managing employee attendance, punctuality, and leave records</li>
+      <li>Calculating attendance-based payroll components where applicable</li>
+      <li>Providing HR personnel with accurate, real-time workforce presence data</li>
+    </ul>
+
+    <h3>7.2 Operational Coordination</h3>
+    <ul>
+      <li>Facilitating communication between employees, leads, HR, and management through internal messaging</li>
+      <li>Managing and tracking operational modules including site activity, driver assignments, lead management, and cab coordination</li>
+    </ul>
+
+    <h3>7.3 Security and Compliance</h3>
+    <ul>
+      <li>Verifying that attendance is being marked from authorized locations via geofencing</li>
+      <li>Maintaining audit trails for compliance with internal policies and applicable labor regulations</li>
+      <li>Detecting and investigating unauthorized access or fraudulent attendance activities</li>
+    </ul>
+
+    <h3>7.4 System Reliability and Improvement</h3>
+    <ul>
+      <li>Diagnosing technical errors, crashes, and performance issues using device and log data</li>
+      <li>Improving the Application's features based on anonymized usage patterns and feedback</li>
+    </ul>
+
+    <div class="callout warning">
+      <p><strong>We do not use your personal data for:</strong> advertising or marketing to third parties, selling or renting data to external organizations, building behavioral profiles for commercial use, or any purpose unrelated to legitimate workforce management.</p>
+    </div>
+  </section>
+
+  <!-- S8 -->
+  <section id="s8">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <h2>Data Sharing &amp; Disclosure</h2>
+    </div>
+
+    <p>We do not sell, rent, or trade employee personal data. Sharing is limited to the following circumstances:</p>
+
+    <h3>8.1 Within the Organization</h3>
+    <ul>
+      <li><strong>HR and Admin Personnel:</strong> Have access to employee records, attendance logs, and account management functions as required to perform their duties</li>
+      <li><strong>Managers and Team Leads:</strong> Have access to attendance and module data for their direct reports, limited to what is necessary for team management</li>
+      <li><strong>System Administrators:</strong> Have access to technical logs and system-level data for the purpose of maintaining and securing the Application</li>
+    </ul>
+
+    <h3>8.2 Authorized Service Providers</h3>
+    <p>We engage third-party service providers who process data on our behalf under strict contractual obligations. These providers include:</p>
+    <ul>
+      <li><strong>Amazon Web Services (AWS):</strong> Infrastructure and storage provider; processes data only as instructed by us and under AWS's data processing agreements</li>
+      <li><strong>Firebase Cloud Messaging:</strong> Delivers push notifications to employee devices; receives only notification tokens, not message content</li>
+      <li><strong>Expo Notification Services:</strong> Assists in notification delivery on compatible platforms</li>
+      <li><strong>Google Maps (future use):</strong> Will be used solely for the purpose of rendering geofence boundaries within the Application's administrative interface</li>
+    </ul>
+
+    <h3>8.3 Legal and Regulatory Disclosure</h3>
+    <p>We may disclose personal data if required to do so by applicable law, court order, regulatory requirement, or to protect the Company's legal rights. In such cases, we will disclose only the minimum information necessary to satisfy the legal obligation.</p>
+
+    <h3>8.4 Business Transfers</h3>
+    <p>In the event of a merger, acquisition, or transfer of Company assets, employee data may be transferred to the successor entity, subject to equivalent or stronger privacy protections as outlined in this Policy.</p>
+  </section>
+
+  <!-- S9 -->
+  <section id="s9">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <h2>Data Retention Policy</h2>
+    </div>
+
+    <p>We retain personal data only for as long as is necessary for the purposes described in this Policy, or as required by law. The following retention schedules apply:</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Data Category</th><th>Retention Period</th><th>Reason</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Attendance Records</td>
+          <td>Indefinitely, unless Company policy is revised</td>
+          <td>Payroll compliance, labor law obligations, and historical workforce management</td>
+        </tr>
+        <tr>
+          <td>Messages &amp; Uploaded Images</td>
+          <td>7 years</td>
+          <td>Operational and legal record-keeping requirements</td>
+        </tr>
+        <tr>
+          <td>Location Data (outside geofence)</td>
+          <td>2 years</td>
+          <td>Audit trail for attendance disputes and compliance verification</td>
+        </tr>
+        <tr>
+          <td>Device &amp; System Logs</td>
+          <td>Based on operational necessity (typically 90–180 days)</td>
+          <td>Technical troubleshooting and security monitoring</td>
+        </tr>
+        <tr>
+          <td>Account Information</td>
+          <td>Duration of employment + offboarding period</td>
+          <td>Active workforce management; archived per HR policy after separation</td>
+        </tr>
+        <tr>
+          <td>Session Tokens</td>
+          <td>Duration of active session; expire upon logout or inactivity</td>
+          <td>Secure authentication; not retained after expiry</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>When retention periods expire, data is securely deleted or anonymized in a manner that prevents reconstruction of personal information. Deletion schedules are reviewed periodically and may be adjusted to reflect changes in applicable law or Company policy.</p>
+  </section>
+
+  <!-- S10 -->
+  <section id="s10">
+    <div class="section-header">
+      <span class="section-num">10</span>
+      <h2>Account Deletion &amp; Employee Offboarding</h2>
+    </div>
+
+    <p>When an employee separates from the Company — whether through resignation, termination, retirement, or contract completion — the following process is followed:</p>
+
+    <h3>10.1 Account Deactivation</h3>
+    <ul>
+      <li>The employee's account is deactivated by an authorized HR or Admin officer, immediately revoking access to the Application and all its modules</li>
+      <li>Active session tokens are invalidated upon deactivation</li>
+      <li>The employee's login credentials are disabled and cannot be reused</li>
+    </ul>
+
+    <h3>10.2 Data Transfer and Reassignment</h3>
+    <ul>
+      <li>Open tasks, leads, assets, or module records associated with the departing employee are transferred to designated active personnel as determined by HR or the relevant department manager</li>
+      <li>Communications and documents relevant to ongoing operations are preserved and reassigned as appropriate</li>
+    </ul>
+
+    <h3>10.3 Retention of Historical Records</h3>
+    <p>Following offboarding, historical records — including attendance logs, messages, and activity data — are retained in accordance with the Data Retention Policy in Section 9. This data may be required for payroll reconciliation, legal proceedings, compliance audits, or statutory labor record-keeping obligations.</p>
+
+    <h3>10.4 Data Deletion Requests</h3>
+    <p>Employees who wish to request deletion of their personal data upon separation may contact HR or the Application Administrator. Deletion requests will be honored to the extent permissible under applicable law; certain records may be required to be retained regardless of deletion request (e.g., attendance records required by labor law).</p>
+  </section>
+
+  <!-- S11 -->
+  <section id="s11">
+    <div class="section-header">
+      <span class="section-num">11</span>
+      <h2>Data Storage &amp; Security</h2>
+    </div>
+
+    <p>We take the security of employee personal data seriously. Our infrastructure and practices are designed to protect data against unauthorized access, alteration, disclosure, or destruction.</p>
+
+    <h3>11.1 Infrastructure</h3>
+    <p>Our backend infrastructure is hosted on <strong>Amazon Web Services (AWS)</strong>, one of the world's leading cloud platforms with extensive security certifications. Services used include:</p>
+    <ul>
+      <li><strong>EC2 (Elastic Compute Cloud):</strong> Compute services for running application servers</li>
+      <li><strong>RDS (Relational Database Service):</strong> Managed database service with automated backups, failover, and encryption at rest</li>
+      <li><strong>S3 (Simple Storage Service):</strong> Secure object storage for uploaded files, with access control policies limiting retrieval to authorized services only</li>
+    </ul>
+
+    <h3>11.2 Data Transmission Security</h3>
+    <ul>
+      <li>All data transmitted between the Application and our servers is encrypted using <strong>HTTPS/TLS</strong> (Transport Layer Security)</li>
+      <li>Certificates are managed and rotated to maintain current encryption standards</li>
+      <li>API endpoints are not publicly accessible; they require valid authentication tokens</li>
+    </ul>
+
+    <h3>11.3 Access Controls</h3>
+    <ul>
+      <li><strong>Role-based access control (RBAC):</strong> Each user can only access data and features appropriate to their role</li>
+      <li><strong>Principle of least privilege:</strong> Employees, administrators, and systems are granted only the minimum level of access required to perform their functions</li>
+      <li><strong>Administrative access logging:</strong> All administrative actions are logged and auditable</li>
+    </ul>
+
+    <h3>11.4 Server-Level Security</h3>
+    <ul>
+      <li>Server-level logging captures access events, authentication attempts, and system activity</li>
+      <li>Intrusion detection and monitoring are applied to backend infrastructure</li>
+      <li>Databases are not publicly exposed; access is restricted to application-layer services via private networking</li>
+    </ul>
+
+    <h3>11.5 Backup and Recovery</h3>
+    <ul>
+      <li>Regular automated backups are maintained for all databases and critical data stores</li>
+      <li>Backup integrity is tested periodically to ensure data can be recovered in the event of system failure</li>
+    </ul>
+
+    <div class="callout warning">
+      <p><strong>No system is entirely immune to security risks.</strong> While we implement industry-standard safeguards, employees are also responsible for protecting their login credentials, not sharing account access, and logging out of the Application when using shared devices.</p>
+    </div>
+  </section>
+
+  <!-- S12 -->
+  <section id="s12">
+    <div class="section-header">
+      <span class="section-num">12</span>
+      <h2>Third-Party Services</h2>
+    </div>
+
+    <p>The Application integrates with a limited number of third-party services necessary for its operation. These integrations are listed below along with a description of how each service interacts with employee data.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Service</th><th>Purpose</th><th>Data Shared</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Firebase Cloud Messaging (FCM)</strong></td>
+          <td>Delivers push notifications (attendance reminders, message alerts, module updates) to Android and iOS devices</td>
+          <td>Device push token only; no personal data or message content</td>
+        </tr>
+        <tr>
+          <td><strong>Expo Notification Services</strong></td>
+          <td>Cross-platform notification delivery layer used with Expo-based builds</td>
+          <td>Device push token only</td>
+        </tr>
+        <tr>
+          <td><strong>Google Maps (future integration)</strong></td>
+          <td>Will be used to render geofence zones on the administrative setup interface for office location configuration</td>
+          <td>Anonymized map data and coordinates; no employee personal data</td>
+        </tr>
+        <tr>
+          <td><strong>Amazon Web Services (AWS)</strong></td>
+          <td>Cloud infrastructure hosting for compute, database, and file storage</td>
+          <td>All application data as described in Section 2; governed by AWS Data Processing Agreements</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>No analytics SDKs, behavioral tracking tools, or advertising networks are integrated into this Application.</strong> We do not use any service whose business model depends on monetizing user data.</p>
+  </section>
+
+  <!-- S13 -->
+  <section id="s13">
+    <div class="section-header">
+      <span class="section-num">13</span>
+      <h2>Employee Rights</h2>
+    </div>
+
+    <p>Employees have specific rights with respect to their personal data processed by the Application. The availability and scope of these rights may vary based on applicable law and your jurisdiction.</p>
+
+    <h3>13.1 Right to Access</h3>
+    <p>You have the right to request a summary of the personal data we hold about you, including your attendance history, account information, and any stored location data. Requests can be directed to HR or the Application Administrator.</p>
+
+    <h3>13.2 Right to Correction</h3>
+    <p>If you believe your data is inaccurate or incomplete (e.g., an attendance record is incorrectly marked), you may request a correction. HR will review and update records as appropriate after verification.</p>
+
+    <h3>13.3 Right to Deletion</h3>
+    <p>You may request deletion of your personal data. We will honor deletion requests to the extent permitted by law. Certain data — such as attendance records required for payroll or statutory compliance — may be exempt from deletion under applicable labor law.</p>
+
+    <h3>13.4 Right to Object</h3>
+    <p>You may object to certain types of data processing if you believe we are processing your data in a manner inconsistent with this Policy or your legal rights. Please raise any objections in writing to HR or the Application Administrator.</p>
+
+    <h3>13.5 Right to Data Portability (where applicable)</h3>
+    <p>Under GDPR and certain other data protection frameworks, you may have the right to receive a copy of your personal data in a structured, machine-readable format. Contact the Application Administrator to make such a request.</p>
+
+    <h3>13.6 How to Exercise Your Rights</h3>
+    <p>To exercise any of the rights described above, please contact:</p>
+    <ul>
+      <li>Your HR representative directly</li>
+      <li>The Application Administrator via email at <strong>prasanna@citadelnetinc.com</strong></li>
+    </ul>
+    <p>We will acknowledge your request within 5 business days and aim to fulfill it within 30 days. Complex requests or large volumes may take up to 60 days, in which case we will notify you of the expected timeline.</p>
+  </section>
+
+  <!-- S14 -->
+  <section id="s14">
+    <div class="section-header">
+      <span class="section-num">14</span>
+      <h2>Legal Basis for Processing</h2>
+    </div>
+
+    <p>All personal data processing activities carried out through the Application are grounded in one or more of the following legal bases:</p>
+
+    <h3>14.1 Contractual Necessity</h3>
+    <p>Processing of attendance data, account information, and employee records is necessary for the performance of the employment contract between the Company and the employee. Attendance tracking, role assignment, and communication tools are integral to the employment relationship.</p>
+
+    <h3>14.2 Legitimate Business Interest</h3>
+    <p>The Company has a legitimate interest in managing its workforce effectively, ensuring operational compliance, verifying attendance through geofencing, and maintaining secure and functional internal communication tools. These interests are balanced against the employee's right to privacy and are proportionate to the purposes described in this Policy.</p>
+
+    <h3>14.3 Legal Obligation</h3>
+    <p>Certain data processing activities — such as maintaining attendance records, retaining financial and operational documentation, and cooperating with lawful regulatory requests — are required to comply with applicable labor, tax, and corporate governance laws.</p>
+
+    <h3>14.4 Consent (where applicable)</h3>
+    <p>For certain features — such as biometric authentication and optional notification preferences — processing is based on the employee's voluntary consent. Consent can be withdrawn at any time without affecting the legality of processing prior to withdrawal.</p>
+  </section>
+
+  <!-- S15 -->
+  <section id="s15">
+    <div class="section-header">
+      <span class="section-num">15</span>
+      <h2>Compliance with Data Protection Laws</h2>
+    </div>
+
+    <p>The Company is committed to aligning its data practices with applicable legal frameworks:</p>
+
+    <h3>15.1 India – Digital Personal Data Protection Act (DPDP Act), 2023</h3>
+    <p>As an Indian enterprise, we align our data processing practices with the DPDP Act. Key obligations include:</p>
+    <ul>
+      <li>Processing personal data only for lawful purposes for which the employee has given implied or explicit consent or which are necessary for a legitimate purpose</li>
+      <li>Maintaining the accuracy and completeness of personal data</li>
+      <li>Implementing reasonable security safeguards to prevent data breaches</li>
+      <li>Honoring data principal rights including access, correction, and erasure</li>
+    </ul>
+
+    <h3>15.2 GDPR Principles (where applicable)</h3>
+    <p>Where employees are based in or data is transferred to regions subject to the GDPR, we follow its core principles: lawfulness, fairness and transparency; purpose limitation; data minimization; accuracy; storage limitation; integrity and confidentiality; and accountability.</p>
+
+    <h3>15.3 Ongoing Compliance Review</h3>
+    <p>We periodically review our data practices against evolving legal requirements and will update this Policy as necessary to reflect changes in applicable law or organizational practices.</p>
+  </section>
+
+  <!-- S16 -->
+  <section id="s16">
+    <div class="section-header">
+      <span class="section-num">16</span>
+      <h2>Children's Privacy</h2>
+    </div>
+
+    <p>This Application is designed and intended exclusively for use by authorized adult employees of the Company. We do not knowingly collect, store, or process personal data from individuals under the age of 18. Accounts are created only by HR or Admin personnel in the context of a formal employment relationship, which by law requires that the individual be of legal working age in their jurisdiction.</p>
+
+    <p>If it is ever discovered that personal data has been inadvertently collected from a minor, we will take immediate steps to delete such data and review how the situation arose to prevent recurrence.</p>
+  </section>
+
+  <!-- S17 -->
+  <section id="s17">
+    <div class="section-header">
+      <span class="section-num">17</span>
+      <h2>Data Breach and Incident Response</h2>
+    </div>
+
+    <p>Despite our security measures, no system is entirely free from risk. In the event of a data security incident, the following process will be followed:</p>
+
+    <h3>17.1 Detection and Containment</h3>
+    <p>Upon detection of a suspected or confirmed data breach, the responsible technical and administrative personnel will take immediate steps to contain the breach, prevent further unauthorized access, and preserve evidence for investigation.</p>
+
+    <h3>17.2 Assessment</h3>
+    <p>The nature and scope of the breach will be assessed to determine: what data was affected, how many individuals are impacted, the likely consequences for those individuals, and the root cause of the incident.</p>
+
+    <h3>17.3 Notification</h3>
+    <ul>
+      <li><strong>Affected Employees:</strong> Employees whose data may have been compromised will be notified promptly, with information about what occurred, what data was involved, and what steps they should take</li>
+      <li><strong>Regulatory Authorities:</strong> Where required by law (e.g., under the DPDP Act or GDPR), the relevant data protection authority will be notified within the legally required timeframe</li>
+    </ul>
+
+    <h3>17.4 Remediation</h3>
+    <p>Following the incident, we will implement corrective measures to address the root cause, improve security controls, and update policies and procedures as necessary to reduce the risk of recurrence.</p>
+  </section>
+
+  <!-- S18 -->
+  <section id="s18">
+    <div class="section-header">
+      <span class="section-num">18</span>
+      <h2>Cross-Border Data Transfers</h2>
+    </div>
+
+    <p>Our backend infrastructure is hosted on Amazon Web Services (AWS). AWS data centers are located across multiple regions globally. Data may be processed or stored in regions outside India, including in countries within the United States or European Union, depending on the AWS region configured for our services.</p>
+
+    <p>Where data is transferred across borders, we ensure that adequate safeguards are in place, including reliance on AWS's standard contractual clauses and compliance certifications. We will update this Policy if significant changes are made to the regions in which data is processed.</p>
+
+    <p>Employees who have questions about where their specific data is stored may contact the Application Administrator.</p>
+  </section>
+
+  <!-- S19 -->
+  <section id="s19">
+    <div class="section-header">
+      <span class="section-num">19</span>
+      <h2>Changes to This Policy</h2>
+    </div>
+
+    <p>We reserve the right to update or amend this Privacy Policy at any time to reflect changes in our data practices, applicable laws, or organizational operations. When material changes are made:</p>
+    <ul>
+      <li>An updated version of this Policy will be published within the Application or on the associated information page</li>
+      <li>The "Last Updated" date at the bottom of this document will be revised</li>
+      <li>Employees will be notified of significant changes via in-app notification or email communication</li>
+    </ul>
+    <p>We encourage employees to review this Policy periodically. Continued use of the Application following notification of changes constitutes acknowledgment of the updated Policy.</p>
+  </section>
+
+  <!-- S20 -->
+  <section id="s20">
+    <div class="section-header">
+      <span class="section-num">20</span>
+      <h2>Contact Information</h2>
+    </div>
+
+    <p>For any questions, concerns, or requests related to this Privacy Policy or the handling of your personal data, please contact:</p>
+
+    <div class="callout">
+      <p><strong>Application Administrator / Data Contact</strong><br>
+      Email: <a href="mailto:prasanna@citadelnetinc.com" style="color: var(--accent);">prasanna@citadelnetinc.com</a><br>
+      Organization: Citadel Net Inc.<br>
+      Response Time: Within 5 business days</p>
+    </div>
+
+    <p>For internal HR-related concerns regarding your employment records, please contact your designated HR representative directly.</p>
+  </section>
+
+  <!-- Footer -->
+  <div class="doc-footer">
+    <p>Last Updated: March 2026 &nbsp;·&nbsp; Version 2.0</p>
+    <p>Employee Management Application &nbsp;·&nbsp; Citadel Net Inc.</p>
   </div>
 
+</div>
 </body>
 </html>
